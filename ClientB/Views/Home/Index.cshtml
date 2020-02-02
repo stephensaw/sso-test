@@ -1,0 +1,10 @@
+﻿@model ClientB.Models.UserModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @Model.FullName</h1>
+    <a href="/home/logout">Logout</a>
+</div>

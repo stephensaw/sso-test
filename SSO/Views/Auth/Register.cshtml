@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+
+<form asp-controller="Auth" asp-action="Register" method="post">
+    <div class="form-group">
+        <label for="fullname">Full name</label>
+        <input type="text" id="fullname" name="fullname" required class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="comfirmpassword">Confirm password</label>
+        <input type="password" id="comfirmpassword" name="comfirmpassword" required class="form-control" />
+    </div>
+
+    <div class="form-group text-right">
+        <span style="font-size: small" class="pr-1">
+            <a asp-area="" asp-controller="Auth" asp-action="Login">Login</a> Or
+        </span>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+</form>
+
+<span class="text-info">@ViewBag.Message</span>

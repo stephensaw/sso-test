@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+<form action="login?redirect_url=@Context.Request.Query["redirect_url"]" method="post">
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required class="form-control" />
+    </div>
+    <div class="form-group text-right">
+        <span style="font-size: small" class="pr-1">
+            <a asp-area="" asp-controller="Auth" asp-action="Register">Register</a> Or
+        </span>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+</form>
+
+<span class="text-info">@ViewBag.Message</span>
